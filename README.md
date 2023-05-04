@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# Create Dynamic Component 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple React application that demonstrates how to dynamically render components based on a list of records. The list of records can be updated at runtime, and the components will be re-rendered automatically.
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+To get started, clone the repository and navigate to the project directory. Then, install the dependencies using the following command:
 
-### `npm start`
+```
+npm install
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Once the dependencies are installed, you can start the application using the following command:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+npm start
+```
 
-### `npm test`
+The application will then be available at `http://localhost:3000/`.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## How it Works
 
-### `npm run build`
+The application defines four components - `component1`, `component2`, `component3`, and `component4`. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The `App` component defines a state variable called `records`, which contains an array of objects representing each component that should be rendered. Each object contains a `key`, `name`, and `data` property.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+In the `handleDynamicComponent` function, we use the `componentMap` object to map the `key` property of each record to the corresponding component. We then add the resulting component to the `component` property of the record object.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To show the data of the components, we use the `map` function to iterate over the `records` array and render each component in a separate `div` element.
 
-### `npm run eject`
+The `useEffect` hook is used to update the `component` property of each record object whenever the `records` state variable changes.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Usage
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To add a new component to the list, simply add a new object to the `records` array with a `key` property that matches the name of the component you want to render, a `name` property that specifies the display name of the component, and a `data` property that contains any data that the component needs to render.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Conclusion
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+That's it! This simple React application demonstrates how you can display dynamic components based on a set of records. 
