@@ -28,7 +28,6 @@ In the `handleDynamicComponent` function, we use the `componentMap` object to ma
 
 Then we show dynamic component which is in record state.
 
-The `useEffect` hook is used to update the `component` property of each record object whenever the `records` state variable changes.
 
 ## Usage
 
