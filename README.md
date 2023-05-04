@@ -24,9 +24,9 @@ The application defines four components - `component1`, `component2`, `component
 
 The `App` component defines a state variable called `records`, which contains an array of objects representing each component that should be rendered. Each object contains a `key`, `name`, and `data` property.
 
-In the `handleDynamicComponent` function, we use the `componentMap` object to map the `key` property of each record to the corresponding component. We then add the resulting component to the `component` property of the record object.
+In the `handleDynamicComponent` function, we use the `componentMap` object to map the `key` property of each record to the corresponding component. Then we add the resulting component to the `component` property of the record object.
 
-To show the data of the components, we use the `map` function to iterate over the `records` array and render each component in a separate `div` element.
+Then we show dynamic component which is in record state.
 
 The `useEffect` hook is used to update the `component` property of each record object whenever the `records` state variable changes.
 
