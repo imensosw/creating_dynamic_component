@@ -28,6 +28,20 @@ The `componentNames` object is a map of all the components that can be rendered 
 
 In the `handleDynamicComponent` function, we use the `componentMap` object to map the `key` property of each record to the corresponding component. Then we add the resulting component to the `component` property of the record object.
 
+```
+const handleDynamicComponent = () => {
+    records.length > 0 && records.map((ele) => {
+      const DynamicComponent = componentMap[ele.key]
+      ele.component = (
+        <DynamicComponent
+          data={ele.data}
+          key={ele.data}
+        />
+      );
+    })
+  }
+```
+
 In the `return` statement of the `App.js` file, the dynamically rendered components are displayed by mapping over the `records` array and accessing the `component` property of each record object.
 
 Finally, we show dynamic component which is in record state.
