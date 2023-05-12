@@ -43,10 +43,7 @@ const handleDynamicComponent = () => {
     })
   }
 ```
-
-In the `return` statement of the `App.js` file, the dynamically rendered components are displayed by mapping over the `records` array and accessing the `component` property of each record object.
-
-Finally, we show dynamic component which is in record state.
+we show dynamic component using map method.
 
 ## Usage
 
