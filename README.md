@@ -1,5 +1,7 @@
 # Create Dynamic Component 
 
+## How to create dynamic component to show in a loop 
+
 This is a simple React application that demonstrates how to dynamically render components based on a list of records. The list of records can be updated at runtime, and the components will be re-rendered automatically.
 
 ## Getting Started
